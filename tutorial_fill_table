@@ -1,3 +1,4 @@
+# Running with iPython will help!
 %run tutorial_db_handler.py
 # Fill Projects
 tutorial.create_project('HTRU-N','Effelbserg')
@@ -6,17 +7,6 @@ tutorial.create_project('HTRU-S','Parkes')
 tutorial.create_project('TRAPUM','MeerKAT')
 tutorial.create_project('PALFA','Arecibo')
 tutorial.create_project('LEAP','Jodrell')
-
-
-#Test Left join/Right Join
-
-select target_id from Targets left outer join Projects on Targets.project_id=Projects.project_id where Targets.project_id LIKE 3;
-
-
-# Test inner join
-
-select Targets.source_name,Projects.notes from Targets inner join Projects on Targets.project_id=Projects.project_id;
-
 
 # Fill targets
 
@@ -35,8 +25,17 @@ tutorial.create_target(2,'SMC candidate','00:52','-72:49','NA','7','5','NA','NA'
 
 
 
-# Pivot example
+Direct MySQL commands
+
+#Test Left join/Right Join
+
+select target_id from Targets left outer join Projects on Targets.project_id=Projects.project_id where Targets.project_id LIKE 3;
+
+# Test inner join
+
+select Targets.source_name,Projects.notes from Targets inner join Projects on Targets.project_id=Projects.project_id;
 
 
 
+## Important things to look at and try : Joins, Pivot, Update, Insert
 
