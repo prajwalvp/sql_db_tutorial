@@ -1,7 +1,19 @@
+""""
+####Sample code to connect to an SQL server and update,query and insert values.#########
+
+There are 2 classes defined here
+
+a) The BaseDBManager class is meant for specific control and procedures.
+
+b) The TutorialDatabase class contains functions to play around with the tables specified in the schema.
+
+
+
+"""""
+
 import os
 import sys
-import MySQLdb
-#import sql as qb #query builder
+import MySQLdb 
 import numpy as np
 import time
 import warnings
@@ -110,10 +122,10 @@ class BaseDBManager(object):
 
 
 class TutorialDataBase(BaseDBManager):
-    __HOST = "172.17.0.2"
-    __NAME = "trapum_new"
-    __USER = "root"
-    __PASSWD = "abc"
+    __HOST = "172.17.0.2" # Host IP
+    __NAME = "psr_sql_tutorial" # Name of database to connect to
+    __USER = "root" # User name
+    __PASSWD = "abc" # Password
     def __init__(self):
         super(TutorialDataBase,self).__init__()
 
@@ -457,6 +469,6 @@ class TutorialDataBase(BaseDBManager):
 
 
 if __name__ =='__main__':
-    tutorial = TutorialDataBase();
-    c = tutorial.connect()
-    c1 = c.cursor()
+    tutorial = TutorialDataBase(); #Create an object of the TutorialDatabase class
+    c = tutorial.connect() # Connects to the SQL server based on _HOST,_NAME,_USER,_PASSWD
+    c1 = c.cursor() # Cursor create an object instance through which queries can be made.
