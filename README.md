@@ -22,16 +22,37 @@ You need to have the MySQLdb python library installed. Check out this link for t
   
 https://stackoverflow.com/questions/25865270/how-to-install-python-mysqldb-module-using-pip
 
-- run a docker inspect <container_name> to get the ip and put this in the code
+- run a docker inspect <container_name> to get the ip and put this in the python code (Edit lines 125 to 128 in tutorial_db_handler.py accordingly)
 
-Now you can update,create,query the db
+Now you can update,create,query the db.The tutorial_fill_db document has some functions and commands to play around with  
 
 b) 
 docker exec -it tutorial_sql mysql -uroot -p
+Enter password on prompt which is 'abc' 
 
+#Strongly recommend using a nice GUI for DB management in general.
 
-Although I recommend using a nice GUI for DB management in general.
+- DBeaver or phpmyadmin on Linux. DBeaver can be installed by RZ on local Desktops. phpmyadmin works for good for own laptops.
 
-- DBeaver or phpmyadmin on Linux
+phpmyadmin install: https://www.hostingadvice.com/how-to/install-phpmyadmin-on-ubuntu/
+You mostly will encounter errors after following above link. This will help
+https://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it
 
 - Sequel Pro for Mac
+https://www.sequelpro.com/
+
+
+Some useful website links:
+
+Tutorials and concepts
+https://www.w3schools.com/sql/default.asp
+https://docs.microsoft.com/en-us/azure/architecture/data-guide/relational-data/
+
+Python library for MySQL
+https://mysqlclient.readthedocs.io/index.html 
+
+Pivot tables
+https://blogs.msdn.microsoft.com/spike/2009/03/03/pivot-tables-in-sql-server-a-simple-sample/ (Something important I missed out in the tutorial)
+
+Database Diagrams
+https://app.quickdatabasediagrams.com/#/d/q3gCZ3 (To create easy Database schema visualisations)
