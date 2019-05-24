@@ -25,13 +25,12 @@ tutorial.create_target(3,'LMC','05:23','-69:45:00','MC','5','10','20','Targeted 
 tutorial.create_target(1,'0329+54','03:29','+54:00:00','NA','NA','NA','NA','Test pulsar','We better see this!')
 tutorial.create_target(1,'Fermi_fw','12:00:00','+70:00:00','NA','2','1','45','NA','multiwavelength')
 tutorial.create_target(2,'Andrew candidate','17:57','-18:54','NA','5','4','NA','NA','could be pathbreaking!')
-tutorial.create_target(2,'Jompoj candidate','17:00','-28:00','NA','7','5','NA','NA','Probably GC pulsar?')
 tutorial.create_target(4,'slow candidate','10:00','-45:00','NA','8','6','NA','NA','P=23s are you kidding me?!')
 tutorial.create_target(4,'Sharp peryton like signal','04:20','+42:00','NA','4','2','NA','NA','Microwave oven it is!')
 tutorial.create_target(5,'SETI_followup','05:00','+25:01','NA','10','5','NA','NA','Carl Sagan was right!')
 tutorial.create_target(5,'Sag A*','17:45','-28:52','NA','10','5','NA','NA','In battle to find an oribiting Pulsar, DM wins')
-tutorial.create_target(2,'SMC candidate','00:52','-72:49','NA','7','5','NA','NA','Probably GC pulsar?')
-update Targets set notes='False Positive' where source_name='SMC candidate';
+tutorial.create_target(2,'SMC candidate','00:52','-72:49','NA','7','5','NA','NA','False Positive')
+
 
 
 
