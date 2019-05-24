@@ -16,6 +16,13 @@ Now there are 2 ways you can connect to this.
 
 a) 
 - Use the python snippet tutorial_db_handler.py
+
+Before that...
+
+You need to have the MySQLdb python library installed. Check out this link for the relevant OS
+  
+https://stackoverflow.com/questions/25865270/how-to-install-python-mysqldb-module-using-pip
+
 - run a docker inspect <container_name> to get the ip and put this in the code
 
 Now you can update,create,query the db
