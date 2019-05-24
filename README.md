@@ -14,10 +14,9 @@ This builds an image with an already made schema (See the Dockerfile for how thi
 
 Now there are 2 ways you can connect to this.
 
-a) 
-- Use the python snippet tutorial_db_handler.py
+a) Use the python snippet tutorial_db_handler.py
 
-Before that...
+But Before that...
 
 You need to have the MySQLdb python library installed. Check out this link for the relevant OS
   
