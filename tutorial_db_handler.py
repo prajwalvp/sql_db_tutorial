@@ -249,6 +249,22 @@ class TutorialDataBase(BaseDBManager):
         last_id = self.simple_update("Pointings",cols,values,condition)
         return last_id
 
+    def update_project_name(self,project_name,old_name):
+        """
+        @brief   Update Project name
+
+        @params  project_name    new project name
+        @params  old_name       old project name
+
+
+        @return  project_id
+        """
+        cols = "Name"
+        value = project_name
+        condition = "Name='%s'"%old_name
+        last_id = self.simple_update("Projects",cols,value,condition)
+        return last_id
+
 
     def create_raw_dataproduct(self,pointing_id,beam_id,file_status,filepath,file_type,metadata,notes):
         """
@@ -446,7 +462,7 @@ class TutorialDataBase(BaseDBManager):
         @params  cols         Columns in table to be updated
         @params  values       values for the respective columns to be updated
         """
-        self.execute_insert("UPDATE %s set %s=%s WHERE %s"%(table,cols,values,condition))
+        self.execute_insert("UPDATE %s set %s='%s' WHERE %s"%(table,cols,values,condition))
         print "UPDATE %s set %s=%s WHERE %s"%(table,cols,values,condition)
         
     def get_values(self,table,col,condition):
